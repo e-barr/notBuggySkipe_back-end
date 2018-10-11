@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(version: 2018_10_11_152719) do
     t.string "country"
     t.string "image_url"
     t.integer "meeting_id"
-    t.integer "contact_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
