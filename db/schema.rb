@@ -25,12 +25,6 @@ ActiveRecord::Schema.define(version: 2018_10_10_214843) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "inboxes", force: :cascade do |t|
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "meeting_rooms", force: :cascade do |t|
     t.string "name"
     t.integer "person_count", default: 0
