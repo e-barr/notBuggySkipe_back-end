@@ -1,8 +1,8 @@
 class CreateContacts < ActiveRecord::Migration[5.2]
   def change
     create_table :contacts do |t|
-      t.user_1 :integer
-      t.user_2 :integer
+      t.integer :user_1
+      t.integer :user_2
 
       t.timestamps
     end
