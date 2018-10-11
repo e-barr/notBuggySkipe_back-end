@@ -5,4 +5,8 @@ class User < ApplicationRecord
 
   has_many :contacts, foreign_key: :user_1, class_name: :Contact
 
+  def self.current_users
+    User.all.select { |user| user.logged_in == true }
+  end
+
 end
