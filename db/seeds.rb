@@ -18,5 +18,5 @@ email1and2 = Email.create(sender_id: user1.id, receiver_id: user2.id, invite: tr
 email2and3 = Email.create(sender_id: user2.id, receiver_id: user3.id, invite: false, content: 'Greetings')
 email3and1 = Email.create(sender_id: user3.id, receiver_id: user1.id, invite: false, content: 'Let\'s get cookies')
 
-contact1and2 = Contact.create(user_1_id: user1.id, user_2_id: user2.id)
-contact2and3 = Contact.create(user_1_id: user2.id, user_2_id: user3.id)
+contact1and2 = Contact.make_new_contact(user1.id, user2.id)
+contact2and3 = Contact.make_new_contact(user2.id, user3.id)
