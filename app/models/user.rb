@@ -7,6 +7,16 @@ class User < ApplicationRecord
   validates :email, :username, uniqueness: true
   validates :city, :country, :image_url, presence: true
 
+  attr_accessor :password
+
+  def authenticate(plaintext_password)
+    if BCrypt::Password.new(self.password_digest) == plaintext_password
+      self
+    else
+      false
+    end
+  end
+
   def self.current_users
     User.all.select { |user| user.logged_in == true }
   end
