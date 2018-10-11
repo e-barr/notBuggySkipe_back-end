@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2018_10_11_152719) do
   create_table "emails", force: :cascade do |t|
     t.integer "sender_id"
     t.integer "receiver_id"
-    t.boolean "invite"
+    t.boolean "invite", default: false
     t.integer "room_id"
     t.text "content"
     t.datetime "created_at", null: false
