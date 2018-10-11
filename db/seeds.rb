@@ -17,3 +17,6 @@ mr_3 = MeetingRoom.create(name: "room3")
 email1and2 = Email.create(sender_id: user1.id, receiver_id: user2.id, invite: true, room_id: mr_1.id, content: 'Meeting at 2pm in "room1"')
 email2and3 = Email.create(sender_id: user2.id, receiver_id: user3.id, invite: false, content: 'Greetings')
 email3and1 = Email.create(sender_id: user3.id, receiver_id: user1.id, invite: false, content: 'Let\'s get cookies')
+
+contact1and2 = Contact.create(user_1_id: user1.id, user_2_id: user2.id)
+contact2and3 = Contact.create(user_1_id: user2.id, user_2_id: user3.id)
