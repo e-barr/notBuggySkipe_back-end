@@ -20,9 +20,9 @@ mr_1 = MeetingRoom.create(name: "room1")
 mr_2 = MeetingRoom.create(name: "room2")
 mr_3 = MeetingRoom.create(name: "room3")
 
-invite1and2 = Invite.create(sender_id: user1.id, receiver_id: user2.id, invite: true, room_id: mr_1.id, content: 'Meeting at 2pm in "room1"')
-invite2and3 = Invite.create(sender_id: user2.id, receiver_id: user3.id, invite: false, content: 'Greetings')
-invite3and1 = Invite.create(sender_id: user3.id, receiver_id: user1.id, invite: false, content: 'Let\'s get cookies')
+invite1and2 = Invite.create(sender_id: user1.id, receiver_id: user2.id, room_id: mr_1.id, content: 'Meeting at 2pm in "room1"')
+invite2and3 = Invite.create(sender_id: user2.id, receiver_id: user3.id, content: 'Greetings')
+invite3and1 = Invite.create(sender_id: user3.id, receiver_id: user1.id, content: 'Let\'s get cookies')
 
 contact1and2 = Contact.make_new_contact(user1.id, user2.id)
 contact2and3 = Contact.make_new_contact(user2.id, user3.id)
