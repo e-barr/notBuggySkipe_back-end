@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2018_10_11_152719) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "emails", force: :cascade do |t|
+  create_table "invites", force: :cascade do |t|
     t.integer "sender_id"
     t.integer "receiver_id"
     t.boolean "invite", default: false

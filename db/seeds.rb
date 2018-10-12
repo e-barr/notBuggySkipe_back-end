@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.destroy_all
 MeetingRoom.destroy_all
-Email.destroy_all
+Invite.destroy_all
 Contact.destroy_all
+User.destroy_all
 
 
 user1 = User.create(email: "user1@email.com", username: "user1", password: "password1", city: "New York", country: "USA", image_url: "https://cdn0.iconfinder.com/data/icons/PRACTIKA/256/user.png")
@@ -20,9 +20,9 @@ mr_1 = MeetingRoom.create(name: "room1")
 mr_2 = MeetingRoom.create(name: "room2")
 mr_3 = MeetingRoom.create(name: "room3")
 
-email1and2 = Email.create(sender_id: user1.id, receiver_id: user2.id, invite: true, room_id: mr_1.id, content: 'Meeting at 2pm in "room1"')
-email2and3 = Email.create(sender_id: user2.id, receiver_id: user3.id, invite: false, content: 'Greetings')
-email3and1 = Email.create(sender_id: user3.id, receiver_id: user1.id, invite: false, content: 'Let\'s get cookies')
+invite1and2 = Invite.create(sender_id: user1.id, receiver_id: user2.id, invite: true, room_id: mr_1.id, content: 'Meeting at 2pm in "room1"')
+invite2and3 = Invite.create(sender_id: user2.id, receiver_id: user3.id, invite: false, content: 'Greetings')
+invite3and1 = Invite.create(sender_id: user3.id, receiver_id: user1.id, invite: false, content: 'Let\'s get cookies')
 
 contact1and2 = Contact.make_new_contact(user1.id, user2.id)
 contact2and3 = Contact.make_new_contact(user2.id, user3.id)
