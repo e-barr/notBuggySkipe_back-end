@@ -8,7 +8,6 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :country
       t.string :image_url
       t.integer :meeting_id, null: true
-      t.boolean :logged_in, default: false
 
       t.timestamps
     end

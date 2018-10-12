@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+MeetingRoom.destroy_all
+Email.destroy_all
+Contact.destroy_all
+
+
 user1 = User.create(email: "user1@email.com", username: "user1", password: "password1", city: "New York", country: "USA", image_url: "https://cdn0.iconfinder.com/data/icons/PRACTIKA/256/user.png")
 user2 = User.create(email: "user2@email.com", username: "user2", password: "password2", city: "San Francisco", country: "USA", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/768px-User_icon_2.svg.png")
 user3 = User.create(email: "user3@email.com", username: "user3", password: "password3", city: "Chicago", country: "USA", image_url: "https://cdn2.iconfinder.com/data/icons/rcons-users-color/32/girl-512.png")
