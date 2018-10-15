@@ -3,4 +3,5 @@ class UserSerializer < ActiveModel::Serializer
 
   has_many :sent_invites
   has_many :received_invites
+  has_many :contacts
 end
