@@ -4,4 +4,5 @@ class UserSerializer < ActiveModel::Serializer
   has_many :sent_invites
   has_many :received_invites
   has_many :contacts
+  belongs_to :meeting_room, optional: true
 end

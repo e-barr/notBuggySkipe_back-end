@@ -51,3 +51,7 @@ gem "active_model_serializers", "~> 0.10.7"
 gem "faker", "~> 1.9"
 
 gem "pry"
+
+gem "awesome_print"
+
+gem "awesome_rails_console"
