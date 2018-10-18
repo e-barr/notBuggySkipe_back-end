@@ -5,6 +5,8 @@ Rails.application.routes.draw do
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
       patch '/profile', to: 'users#update'
+
+      mount ActionCable.server => '/cable'
     end
   end
 end
