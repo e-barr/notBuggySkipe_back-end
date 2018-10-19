@@ -1,6 +1,11 @@
 class Api::V1::UsersController < ApplicationController
   skip_before_action :authorized?, only: [:create]
 
+  def index
+    @users = User.all
+    render json: @users
+  end
+
   def create
     @user = User.create(user_params)
 
@@ -8,7 +13,7 @@ class Api::V1::UsersController < ApplicationController
       @token = encode_token(user_id: @user.id)
       render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
     else
-      render json: { error: 'Failed to create user. Please ensure all fields are filled, and your username and email is unique.' }, status: :not_acceptable
+      render json: { error: 'Failed to create user. Please ensure all fields are filled, and your username and email are unique.' }, status: :not_acceptable
     end
   end
 
