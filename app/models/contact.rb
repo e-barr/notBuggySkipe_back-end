@@ -8,9 +8,10 @@ class Contact < ApplicationRecord
     if user_1_id == user_2_id
       return
     else
-      found_contact = Contact.all.select { |contact| contact.user_1_id == user_1_id && contact.user_2_id == user_2_id }
+      found_contact = User.find(user_1_id)
+      found_contact2 = User.find(user_2_id)
 
-      unless found_contact.length == 1
+      if found_contact && found_contact2
         Contact.create(user_1_id: user_1_id, user_2_id: user_2_id)
         Contact.create(user_1_id: user_2_id, user_2_id: user_1_id)
       end

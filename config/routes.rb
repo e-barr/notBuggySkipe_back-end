@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       patch '/profile', to: 'users#update'
       delete '/contacts', to: 'contacts#destroy'
       get '/users', to: 'users#index'
+      post '/contacts', to: 'contacts#create'
 
 
       mount ActionCable.server => '/cable'
