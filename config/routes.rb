@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       delete '/contacts', to: 'contacts#destroy'
       get '/users', to: 'users#index'
       post '/contacts', to: 'contacts#create'
+      delete '/invites', to: 'invites#destroy'
 
 
       mount ActionCable.server => '/cable'
