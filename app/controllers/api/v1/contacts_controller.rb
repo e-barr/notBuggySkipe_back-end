@@ -8,9 +8,8 @@ class Api::V1::ContactsController < ApplicationController
   end
 
   def create
-    @user_1 = User.find(contact_params[:user_1_id])
-    @user_2 = User.find(contact_params[:user_2_id])
-    @contact = Contact.make_new_contact(@user_1.id, @user_2.id)
+    @contact = Contact.make_new_contact(contact_params[:user_1_id], contact_params[:user_2_id])
+    @user = @contact.user_2
 
     if @contact
       render json: { user: UserSerializer.new(@user) }

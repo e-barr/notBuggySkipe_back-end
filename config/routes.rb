@@ -6,13 +6,10 @@ Rails.application.routes.draw do
       get '/profile', to: 'users#profile'
       patch '/profile', to: 'users#update'
       delete '/contacts', to: 'contacts#destroy'
-      get '/users', to: 'users#index'
       post '/contacts', to: 'contacts#create'
+      get '/users', to: 'users#index'
       delete '/invites', to: 'invites#destroy'
       post '/invites', to: 'invites#create'
-
-
-      # mount ActionCable.server => '/cable'
     end
   end
 end
