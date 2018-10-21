@@ -9,9 +9,10 @@ Rails.application.routes.draw do
       get '/users', to: 'users#index'
       post '/contacts', to: 'contacts#create'
       delete '/invites', to: 'invites#destroy'
+      post '/invites', to: 'invites#create'
 
 
-      mount ActionCable.server => '/cable'
+      # mount ActionCable.server => '/cable'
     end
   end
 end
