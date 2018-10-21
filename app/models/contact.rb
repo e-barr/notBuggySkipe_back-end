@@ -21,7 +21,7 @@ class Contact < ApplicationRecord
   def self.delete_contact(id)
     found_contact = Contact.all.find { |contact| contact.id == id }
 
-    second_contact = Contact.all.select{ |contact| contact.user_1 == found_contact.user_2 && contact.user_2 == found_contact.user_1 }.first
+    second_contact = Contact.all.find { |contact| contact.user_1 == found_contact.user_2 && contact.user_2 == found_contact.user_1 }
 
     found_contact.destroy
     second_contact.destroy
