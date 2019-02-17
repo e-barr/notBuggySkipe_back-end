@@ -1,24 +1,31 @@
-# README
+# notBuggySkipe backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby on Rails API that returns json, and is used with the TwoChat (formerly notBuggySkipe)
+front-end.
 
-Things you may want to cover:
+The address for the live site for this API is: <a href="https://not-buggy-skipe.herokuapp.com/api/v1/">https://not-buggy-skipe.herokuapp.com/api/v1/</a>
 
-* Ruby version
+This API has the following endpoints:
+* /login
+  * post
+* /profile
+  * get
+  * patch
+* /contacts
+  * delete
+  * post
+* /users
+  * get
+* /invites
+  * delete
+  * post
 
-* System dependencies
+Technologies used include:
+* **Ruby**
+* **Ruby on Rails**
+* **jwt**
+* **bcrypt**
+* **active model serializers**
+* **PostgreSQL**
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+For the front-end website, please visit: <a href="https://e-barr.github.io/notBuggySkipe_front-end/">https://e-barr.github.io/notBuggySkipe_front-end/</a>
